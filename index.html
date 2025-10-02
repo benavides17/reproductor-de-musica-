@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Música</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+<section class="reproductor-musica">
+    <h2 id="tituloCancion">Título</h2>
+    <p id="nombreArtista">Artista</p>
+
+    <audio id="cancion"></audio>
+
+    <input type="range" id="progreso" value="0"/>
+
+    <div class="controles">
+        <button id="botonAtras" class="control"><i class="bi bi-skip-start-fill"></i></button>
+        <button id="botonReproducirPausar" class="control play-pause"><i class="bi bi-play-fill" id="iconoControl"></i></button>
+        <button id="botonAdelante" class="control"><i class="bi bi-skip-end-fill"></i></button>
+    </div>
+
+    <div class="agregar-cancion">
+        <input type="text" id="tituloNuevo" placeholder="Título canción">
+        <input type="text" id="artistaNuevo" placeholder="Artista">
+        <input type="text" id="fuenteNueva" placeholder="Archivo (ej: music/nombre.mp3)">
+        <select id="posicionNueva">
+            <option value="inicio">Inicio</option>
+            <option value="final" selected>Final</option>
+        </select>
+        <button id="botonAgregar">Agregar canción</button>
+        <button id="botonEliminar">Eliminar canción actual</button>
+    </div>
+
+    <div class="busqueda-audius">
+        <h3>Buscar en Audius</h3>
+        <input type="text" id="searchInput" placeholder="Artista o canción..." />
+        <button id="searchButton">Buscar</button>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+</section>
+
+<script src="app.js" type="module"></script>
+</body>
+</html>
