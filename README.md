@@ -1,1 +1,0 @@
-buenas noches es solo para aclarar la carpeta musica es el reproductor de musica que esta bien igual que lo esta solo que intente subir otra pero con una funcion de api pero no se actualizaba la carpeta pero solo es para aclarar los nuevos archivos que subi son los quje tiene la api solo uqe no estan un carpeta gracoas por su compresion
