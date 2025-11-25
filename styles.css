@@ -1,0 +1,153 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    width: 100%;
+    background: url(img/paisaje-urbano-de-area-urbana-inspirada-en-el-anime\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+body > * {
+    position: relative;
+    z-index: 2;
+}
+
+.reproductor-musica {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 380px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: rgba(228,228,228,0.1);
+}
+
+.reproductor-musica h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 0.3rem;
+}
+
+.reproductor-musica p {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.7;
+    margin-bottom: 1.2rem;
+}
+
+#progreso {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    background: rgba(165, 165, 165, 0.4);
+    border-radius: 4px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+#progreso::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    background: rgba(165, 165, 165, 0.9);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    outline: 3px solid #fff;
+    box-shadow: 0 6px 10px rgba(228, 228, 228, 0.3);
+    cursor: pointer;
+}
+
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.control {
+    width: 50px;
+    aspect-ratio: 1/1;
+    background: rgba(165, 165, 165, 0.3);
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    outline: 0;
+    font-size: 1.5rem;
+    box-shadow: 0 6px 10px rgba(228, 228, 228, 0.3);
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.control:hover {
+    transform: scale(1.1);
+}
+
+.play-pause i {
+    transform: scale(1.3);
+    transition: all 0.1s linear;
+}
+
+.play-pause i:hover {
+    transform: scale(1.5);
+}
+.agregar-cancion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.agregar-cancion input,
+.agregar-cancion select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+.agregar-cancion button,
+#botonEliminar {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: 0.2s;
+}
+
+.agregar-cancion button:hover,
+#botonEliminar:hover {
+    background-color: #0056b3;
+}
